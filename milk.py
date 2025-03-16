@@ -6,7 +6,7 @@ import json
 PRODUCT_ID = "52262769"  # TCIN for Horizon Organic Whole High Vitamin D Milk 1gal
 STORE_ID = "1426"       # Target store ID for San Jose - Capitol
 API_KEY = "9f36aeafbe60771e321a7cc95a78140772ab3e96"
-DISCORD_WEBHOOK_URL = "WEBHOOK"
+DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/634520943909404702/apTV2tLvKCCQXu9vPm2Eos_oW00hCle0SRafKkqGvQnWs_k6qZf-TY-PBREalT574JLs"
 CHECK_INTERVAL = 3600  # Check every hour (in seconds)
 
 API_URL = "https://redsky.target.com/redsky_aggregations/v1/web/product_fulfillment_v1"
@@ -55,7 +55,7 @@ def check_stock():
 def send_discord_alert():
     """Send a Discord notification when the product is back in stock."""
     payload = {
-        "content": f"@everyone Horizon Organic Whole Milk (1gal) is back in stock at Target San Jose - Capitol for in-store pickup!\nhttps://www.target.com/p/horizon-organic-whole-high-vitamin-d-milk-1gal/-/A-{PRODUCT_ID}"
+        "content": f"Horizon Organic Whole Milk (1gal) is back in stock at Target San Jose - Capitol for in-store pickup!\nhttps://www.target.com/p/horizon-organic-whole-high-vitamin-d-milk-1gal/-/A-{PRODUCT_ID}"
     }
     
     try:
